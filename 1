@@ -1,45 +1,131 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="description" content="[triangle study]">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>JS Bin</title>
-<style id="jsbin-css">
+</head>
+<body>
+<div id="canvas">
+  <div id="1tri" class="triangle triangle-down" ></div>
+  <div id="2tri" class="triangle-down2"> </div>
+   <div id="3tri" class="triangle-down3"> </div>
+   <div id="4tri" class="triangle-down4"> </div>
+   <div id="5tri" class="triangle-down5"> </div>
+
+</div>
+</body>
+</html>
+
+
+<script id="jsbin-source-css" type="text/css">
 #canvas{
   height: 500px;
   width: auto;
   background: rgba(199, 171, 255, 0.9);
 }
-.triangle{
-  width: 50%;
-height: 50%;
-border-style: solid;
-border-width: 500 500% 200% 500%;
-border-color: transparent transparent #721b94;
-}
-</style>
-</head>
-<body>
-<div id="canvas">
-  <repeat n="5"><div id="1row" class="triangle" ></div></repeat>
-  <!--<div id="1row" class="triangle" ></div>
-  <div id="1row" class="triangle" ></div>
-  <div id="1row" class="triangle" ></div>
-  <div id="1row" class="triangle" ></div>-->
-</div>
+  
 
-
-<script id="jsbin-source-css" type="text/css">#canvas{
-  height: 500px;
-  width: auto;
-  background: rgba(199, 171, 255, 0.9);
+#1tri{
+   position: absolute;
+  top : 70%;
 }
-.triangle{
-  width: 50%;
-height: 50%;
-border-style: solid;
-border-width: 500 500% 200% 500%;
-border-color: transparent transparent #721b94;
-}</script>
-</body>
-</html>
+.triangle-down {
+    width: 10%;
+    height: 0;
+    padding-left:10%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-down:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-bottom:-500px;
+
+    border-left: 500px solid transparent ;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #ecb3ff;
+}
+.triangle-down2 {
+    width: 12.5%;
+    height: 0;
+    padding-left:20%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-down2:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-bottom:-400px;
+
+    border-left: 500px solid transparent ;
+    border-right: 500px solid transparent;
+    border-bottom: 400px solid #d966ff;
+}
+
+.triangle-down3 {
+    width: 16.5%;
+    height: 0;
+    padding-left:32.5%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-down3:after {
+    content: "";
+    display: block;
+    width:0;
+    height: 0;
+    margin-left:-500px;
+    margin-bottom:-500px;
+
+    border-left: 500px solid transparent ;
+    border-right: 500px solid transparent;
+    border-bottom: 300px solid #c61aff;
+}
+
+.triangle-down4 {
+    width: 25%;
+    height: 0;
+    padding-left:49%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-down4:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-bottom:-400px;
+
+    border-left: 500px solid transparent ;
+    border-right: 500px solid transparent;
+    border-bottom: 200px solid #8600b3;
+}
+
+.triangle-down5 {
+    width: 40%;
+    height: 0;
+    padding-left:74%;
+    padding-bottom: 10%;
+    overflow: hidden;
+}
+.triangle-down5:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    margin-left:-500px;
+    margin-bottom:-400px;
+
+    border-left: 500px solid transparent ;
+    border-right: 500px solid transparent;
+    border-bottom: 193px solid #39004d;
+}
